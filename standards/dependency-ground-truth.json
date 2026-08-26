@@ -1,0 +1,23 @@
+{
+  "artifact": "veilnode-1.0.0",
+  "method": "synthetic fixture with explicit expected composition",
+  "components": [
+    {
+      "name": "edgeproto",
+      "version": "1.2.3",
+      "purl": "pkg:generic/edgeproto@1.2.3",
+      "sha256": "sha256:648f6c9ad83a0be8e71c0b2641f16818e78f7b973893bb23d39b3b870f7bf477",
+      "scope": "runtime",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "process-telemetry",
+      "version": "2.0.0",
+      "purl": "pkg:generic/process-telemetry@2.0.0",
+      "sha256": "sha256:5c9e30c245a56eab8a0d543cb0ca7fcf8a3a8c3119f20c32184b8d7214cb77af",
+      "scope": "runtime",
+      "license": "MIT"
+    }
+  ]
+}
+

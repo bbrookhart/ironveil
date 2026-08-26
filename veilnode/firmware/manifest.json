@@ -1,0 +1,9 @@
+{
+  "schema": "dev.ironveil.veilnode.firmware/v1",
+  "product": "VEILNODE-1",
+  "hardware_model": "VEILNODE-GATEWAY",
+  "version": "1.0.0",
+  "boot_gate": "SIMULATED_MEASURED_BOOT",
+  "update_channel": "stable"
+}
+

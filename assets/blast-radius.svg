@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="t d">
+  <title id="t">Supply-chain blast radius</title><desc id="d">A compromised dependency maps to builds, releases, devices, and mission functions.</desc>
+  <rect width="1200" height="360" rx="16" fill="#08131a"/>
+  <text x="58" y="52" fill="#dce8ec" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700">DEPENDENCY → MISSION BLAST RADIUS</text>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <g transform="translate(52 128)"><rect width="180" height="84" rx="9" fill="#322126" stroke="#e58b79"/><text x="90" y="35" fill="#ffd9d0" font-size="13" font-weight="700">DEPENDENCY</text><text x="90" y="58" fill="#d8a79c" font-size="11">edgeproto@1.2.3</text></g>
+    <g transform="translate(280 128)"><rect width="180" height="84" rx="9" fill="#13262e" stroke="#46636f"/><text x="90" y="35" fill="#e4edf0" font-size="13" font-weight="700">ARTIFACT</text><text x="90" y="58" fill="#8299a2" font-size="11">sha256:…</text></g>
+    <g transform="translate(508 128)"><rect width="180" height="84" rx="9" fill="#13262e" stroke="#46636f"/><text x="90" y="35" fill="#e4edf0" font-size="13" font-weight="700">RELEASE</text><text x="90" y="58" fill="#8299a2" font-size="11">RELEASE-00001</text></g>
+    <g transform="translate(736 128)"><rect width="180" height="84" rx="9" fill="#13262e" stroke="#46636f"/><text x="90" y="35" fill="#e4edf0" font-size="13" font-weight="700">DEVICE</text><text x="90" y="58" fill="#8299a2" font-size="11">DEVICE-001</text></g>
+    <g transform="translate(964 128)"><rect width="180" height="84" rx="9" fill="#15372f" stroke="#72e0b6"/><text x="90" y="35" fill="#e7fff7" font-size="13" font-weight="700">MISSION</text><text x="90" y="58" fill="#8fd8bd" font-size="11">telemetry</text></g>
+  </g>
+  <g stroke="#6c8791" stroke-width="2" fill="#6c8791"><path d="M232 170h48"/><path d="M460 170h48"/><path d="M688 170h48"/><path d="M916 170h48"/><path d="M274 165l8 5-8 5z"/><path d="M502 165l8 5-8 5z"/><path d="M730 165l8 5-8 5z"/><path d="M958 165l8 5-8 5z"/></g>
+  <text x="600" y="298" text-anchor="middle" fill="#9eb2ba" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13">ironveil impact dependency pkg:generic/edgeproto@1.2.3</text>
+</svg>
+

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">IRONVEIL software and firmware assurance</title>
+  <desc id="desc">An artifact passes through source, build, provenance, signing, verification, and deployment gates.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071018"/><stop offset="1" stop-color="#13232b"/></linearGradient>
+    <linearGradient id="iron" x1="0" x2="1"><stop stop-color="#d8e1e6"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#8ca0aa"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1200" height="420" rx="18" fill="url(#bg)"/>
+  <path d="M0 330 L1200 230 L1200 420 L0 420Z" fill="#0d181e" opacity=".8"/>
+  <g opacity=".18" stroke="#77e6bd"><path d="M0 86H1200M0 128H1200M0 170H1200M0 212H1200"/><path d="M150 0V260M300 0V260M450 0V260M600 0V260M750 0V260M900 0V260M1050 0V260"/></g>
+  <g transform="translate(76 62)" filter="url(#shadow)">
+    <path d="M0 0h14v112H0zM31 0h14v112H31zM62 0h14v112H62z" fill="#77e6bd"/>
+    <path d="M0 0h76v14H0zM0 49h76v14H0zM0 98h76v14H0z" fill="#77e6bd"/>
+  </g>
+  <text x="180" y="140" fill="url(#iron)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="84" font-weight="800" letter-spacing="8">IRONVEIL</text>
+  <text x="184" y="184" fill="#77e6bd" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="600" letter-spacing="4">SOFTWARE &amp; FIRMWARE ASSURANCE</text>
+  <g transform="translate(80 264)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">
+    <g fill="#13232b" stroke="#41616d"><rect width="126" height="48" rx="6"/><rect x="166" width="126" height="48" rx="6"/><rect x="332" width="154" height="48" rx="6"/><rect x="526" width="126" height="48" rx="6"/><rect x="692" width="126" height="48" rx="6"/><rect x="858" width="158" height="48" rx="6"/></g>
+    <g fill="#d8e1e6" text-anchor="middle"><text x="63" y="30">SOURCE</text><text x="229" y="30">BUILD</text><text x="409" y="30">PROVENANCE</text><text x="589" y="30">SIGN</text><text x="755" y="30">VERIFY</text><text x="937" y="30">DEPLOY</text></g>
+    <g stroke="#77e6bd" stroke-width="2"><path d="M126 24h40"/><path d="M292 24h40"/><path d="M486 24h40"/><path d="M652 24h40"/><path d="M818 24h40"/></g>
+  </g>
+  <text x="80" y="368" fill="#b9c8cf" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20">Nothing executes without a verifiable history.</text>
+  <text x="1120" y="368" text-anchor="end" fill="#617985" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13">RESEARCH BUILD · v0.1</text>
+</svg>
+

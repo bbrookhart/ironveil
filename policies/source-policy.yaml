@@ -1,0 +1,9 @@
+release_source_policy:
+  protected_branch: [main]
+  minimum_reviews: 1
+  author_may_self_approve: false
+  required_status_checks: [ci, security]
+  unsigned_direct_push:
+    allowed: false
+claim_boundary: Project policy; not sufficient evidence for a SLSA Source level.
+

@@ -1,0 +1,18 @@
+protected_branches:
+  - main
+minimum_reviews: 1
+author_may_self_approve: false
+required_status_checks:
+  - ci
+  - security
+expected_repository: https://github.com/bbrookhart/ironveil
+expected_builder: https://github.com/bbrookhart/ironveil/.github/workflows/release.yml
+expected_workflow: .github/workflows/release.yml@refs/heads/main
+expected_signer: https://github.com/bbrookhart/ironveil/.github/workflows/release.yml@refs/heads/main
+expected_issuer: https://token.actions.githubusercontent.com
+require_sbom: true
+require_security_evidence: true
+prohibited_licenses:
+  - LicenseRef-Prohibited
+vulnerability_action: REVIEW_REQUIRED
+

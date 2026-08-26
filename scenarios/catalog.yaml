@@ -1,0 +1,164 @@
+schema: dev.ironveil.scenario-catalog/v1
+safety_boundary: synthetic local fixtures only
+scenarios:
+  - scenario_id: SCN-001
+    name: Golden Release
+    threat: none
+    starting_state: complete valid evidence chain
+    mutation: none
+    expected_verification: ALLOW
+    expected_installation: INSTALL
+    expected_evidence: [complete-assurance-chain]
+  - scenario_id: SCN-002
+    name: Unauthorized Source Revision
+    threat: source compromise
+    starting_state: golden release
+    mutation: source approved becomes false
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [source.authorization]
+  - scenario_id: SCN-003
+    name: Missing Review
+    threat: review bypass
+    starting_state: golden release
+    mutation: remove independent reviewer
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [source.authorization]
+  - scenario_id: SCN-004
+    name: Artifact Substitution
+    threat: post-build artifact replacement
+    starting_state: golden release
+    mutation: present a different observed digest
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-001.artifact-digest]
+  - scenario_id: SCN-005
+    name: Provenance Substitution
+    threat: provenance replay
+    starting_state: cryptographically valid evidence
+    mutation: provenance subject references another artifact
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-001.provenance-binding]
+  - scenario_id: SCN-006
+    name: Untrusted Builder
+    threat: build compromise
+    starting_state: cryptographically valid evidence
+    mutation: builder identity differs from policy
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-001.provenance-binding]
+  - scenario_id: SCN-007
+    name: Dependency Drift
+    threat: dependency substitution
+    starting_state: cryptographically valid evidence
+    mutation: add unknown component to SBOM
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [composition.sbom]
+  - scenario_id: SCN-008
+    name: SBOM Divergence
+    threat: composition manipulation
+    starting_state: cryptographically valid evidence
+    mutation: remove a ground-truth component
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [composition.sbom]
+  - scenario_id: SCN-009
+    name: Signing Identity Mismatch
+    threat: unauthorized signing identity
+    starting_state: valid signature under trusted test key
+    mutation: signer identity differs from exact policy
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-002.signature-identity]
+  - scenario_id: SCN-010
+    name: Registry Substitution
+    threat: mutable tag replacement
+    starting_state: golden release
+    mutation: registry resolves another digest
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-001.artifact-digest]
+  - scenario_id: SCN-011
+    name: Expired Update Metadata
+    threat: freeze or replay
+    starting_state: formerly valid metadata
+    mutation: expiration precedes trusted time
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-006.update-metadata]
+  - scenario_id: SCN-012
+    name: Rollback Attempt
+    threat: unauthorized downgrade
+    starting_state: installed version 1.0.0
+    mutation: incoming version becomes 0.9.0
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-005.target-and-rollback]
+  - scenario_id: SCN-013
+    name: Wrong Target
+    threat: target confusion
+    starting_state: valid signed release
+    mutation: metadata names DEVICE-GROUP-B
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [release.authorization, INV-006.update-metadata]
+  - scenario_id: SCN-014
+    name: Compromised Online Signing Role
+    threat: online role compromise
+    starting_state: valid signed release
+    mutation: update role authority becomes false
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-006.update-metadata]
+  - scenario_id: SCN-015
+    name: Key Rotation
+    threat: authority lifecycle
+    starting_state: root version 1
+    mutation: authorized transition to root version 2
+    expected_verification: ALLOW
+    expected_installation: INSTALL
+    expected_evidence: [INV-006.update-metadata]
+  - scenario_id: SCN-016
+    name: Authorized Recovery
+    threat: failed deployment
+    starting_state: valid release with recovery approval
+    mutation: synthetic health check fails
+    expected_verification: RECOVER
+    expected_installation: RECOVER
+    expected_evidence: [release.authorization]
+  - scenario_id: SCN-017
+    name: Missing SBOM
+    threat: evidence omission
+    starting_state: otherwise valid release
+    mutation: remove required composition evidence
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [composition.sbom]
+  - scenario_id: SCN-018
+    name: Known Vulnerability
+    threat: affected dependency
+    starting_state: otherwise valid release
+    mutation: add synthetic critical AFFECTED finding
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [security.attestations]
+  - scenario_id: SCN-019
+    name: Evidence Tampering
+    threat: attestation manipulation
+    starting_state: signed manifested evidence package
+    mutation: change unit-test result after signing
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-002.signature-identity, evidence.package-integrity]
+  - scenario_id: SCN-020
+    name: CI Identity Drift
+    threat: CI token misuse
+    starting_state: cryptographically valid evidence
+    mutation: workflow identity differs from release policy
+    expected_verification: DENY
+    expected_installation: REJECT
+    expected_evidence: [INV-001.provenance-binding]
+

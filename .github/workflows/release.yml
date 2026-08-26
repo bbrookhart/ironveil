@@ -1,0 +1,35 @@
+name: release-evidence
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  construct-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout reviewed source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        run: python -m pip install --disable-pip-version-check uv==0.11.33
+      - name: Verify before release handoff
+        env:
+          IRONVEIL_CI_REPOSITORY: ${{ github.repository }}
+          IRONVEIL_CI_WORKFLOW_REF: ${{ github.workflow_ref }}
+          IRONVEIL_CI_REF: ${{ github.ref }}
+          IRONVEIL_CI_SHA: ${{ github.sha }}
+        run: |
+          uv sync --frozen --all-extras
+          make release experiment
+      - name: Hosted signing boundary
+        run: |
+          echo "v0.1 stops before publication. Sigstore keyless signing and OCI/TUF publishing are not claimed."

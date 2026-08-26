@@ -1,0 +1,12 @@
+dependency_policy:
+  lockfile_required: true
+  unknown_source:
+    action: DENY
+  unpinned_release_dependency:
+    action: DENY
+  known_critical_vulnerability:
+    action: REVIEW_REQUIRED
+  prohibited_license:
+    action: REVIEW_REQUIRED
+claim_boundary: IRONVEIL project policy; not government policy.
+

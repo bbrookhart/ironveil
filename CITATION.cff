@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use IRONVEIL in research, cite this software artifact."
+title: "IRONVEIL: End-to-End Software, Firmware, and Provenance Assurance for Critical Infrastructure"
+type: software
+version: 0.1.0
+date-released: 2026-08-26
+authors:
+  - family-names: Brookhart
+    given-names: Brian
+repository-code: "https://github.com/bbrookhart/ironveil"
+url: "https://github.com/bbrookhart/ironveil"
+license: Apache-2.0
+keywords:
+  - software supply chain
+  - firmware assurance
+  - provenance
+  - critical infrastructure
+  - SLSA
+  - SBOM
+

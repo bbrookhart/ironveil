@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="t d">
+  <title id="t">IRONVEIL trust chain</title><desc id="d">Evidence gates connect reviewed source to installed state.</desc>
+  <rect width="1200" height="330" rx="16" fill="#08131a"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="60" y="54" fill="#dce8ec" font-size="23" font-weight="700">THE ASSURANCE CHAIN</text>
+    <text x="1140" y="54" text-anchor="end" fill="#69838d" font-size="13">EACH EDGE IS VERIFIED</text>
+    <g transform="translate(48 112)">
+      <g fill="#12242c" stroke="#355866" stroke-width="1.5">
+        <rect width="140" height="76" rx="8"/><rect x="165" width="140" height="76" rx="8"/><rect x="330" width="140" height="76" rx="8"/><rect x="495" width="140" height="76" rx="8"/><rect x="660" width="140" height="76" rx="8"/><rect x="825" width="140" height="76" rx="8"/><rect x="990" width="140" height="76" rx="8"/>
+      </g>
+      <g fill="#e4edf0" text-anchor="middle" font-size="14" font-weight="700">
+        <text x="70" y="36">REVIEWED</text><text x="70" y="55">SOURCE</text><text x="235" y="46">BUILD</text><text x="400" y="46">ARTIFACT</text><text x="565" y="46">RELEASE</text><text x="730" y="36">UPDATE</text><text x="730" y="55">METADATA</text><text x="895" y="36">TARGET</text><text x="895" y="55">VERIFIER</text><text x="1060" y="36">INSTALLED</text><text x="1060" y="55">STATE</text>
+      </g>
+      <g stroke="#72e0b6" stroke-width="2" fill="none"><path d="M140 38h25"/><path d="M305 38h25"/><path d="M470 38h25"/><path d="M635 38h25"/><path d="M800 38h25"/><path d="M965 38h25"/></g>
+      <g fill="#72e0b6"><path d="M159 33l7 5-7 5z"/><path d="M324 33l7 5-7 5z"/><path d="M489 33l7 5-7 5z"/><path d="M654 33l7 5-7 5z"/><path d="M819 33l7 5-7 5z"/><path d="M984 33l7 5-7 5z"/></g>
+      <g fill="#78909a" text-anchor="middle" font-size="10"><text x="152" y="103">review</text><text x="317" y="103">provenance</text><text x="482" y="103">SBOM + signature</text><text x="647" y="103">authorization</text><text x="812" y="103">freshness</text><text x="977" y="103">digest</text></g>
+    </g>
+    <rect x="48" y="256" width="1104" height="38" rx="6" fill="#0e1d24" stroke="#29434e"/>
+    <text x="70" y="281" fill="#9eb2ba" font-size="13">SOURCE · BUILD · SIGNING · RELEASE · DISTRIBUTION · TARGET · AUDIT</text>
+    <text x="1130" y="281" text-anchor="end" fill="#72e0b6" font-size="13" font-weight="700">NO DOMAIN SELF-ATTESTS TRUST</text>
+  </g>
+</svg>
+

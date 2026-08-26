@@ -1,0 +1,15 @@
+services:
+  registry:
+    # Integration-only gap: pin this image to a verified platform digest before production use.
+    image: registry:2.8.3
+    restart: "no"
+    read_only: true
+    tmpfs:
+      - /var/lib/registry
+    ports:
+      - "127.0.0.1:5000:5000"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    profiles: ["oci-integration"]

@@ -1,0 +1,66 @@
+registry_version: "1.0"
+retrieved_at: "2026-08-26"
+entries:
+  - name: SLSA
+    version: "1.2"
+    status: APPROVED
+    source: https://slsa.dev/spec/v1.2/
+    used_by: [source-evidence, build-provenance, verification]
+  - name: NIST SSDF
+    version: "1.1"
+    publication: NIST SP 800-218
+    status: FINAL
+    source: https://csrc.nist.gov/pubs/sp/800/218/final
+    used_by: [secure-development, framework-mapping]
+  - name: NIST SSDF
+    version: "1.2"
+    publication: NIST SP 800-218 Rev. 1
+    status: DRAFT
+    source: https://csrc.nist.gov/pubs/sp/800/218/r1/ipd
+    used_by: [standards-monitoring-only]
+  - name: NIST C-SCRM
+    version: "SP 800-161 Rev. 1 Update 1"
+    status: FINAL
+    source: https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final
+    used_by: [supplier-evidence, incident-response, lifecycle-monitoring]
+  - name: CISA SBOM Minimum Elements
+    version: "2026"
+    status: PUBLISHED_GUIDANCE
+    source: https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom
+    used_by: [sbom-validation, composition-evidence]
+  - name: CycloneDX
+    version: "1.7"
+    status: CURRENT_STABLE
+    source: https://cyclonedx.org/specification/overview/
+    used_by: [sbom, vex]
+  - name: in-toto Specification
+    version: "1.0"
+    status: STABLE
+    source: https://in-toto.io/docs/specs/
+    used_by: [attestation-envelope]
+  - name: in-toto Attestation Framework
+    version: "1.0"
+    status: STABLE
+    source: https://in-toto.io/docs/specs/
+    used_by: [attestation-envelope]
+  - name: The Update Framework
+    version: "1.0.36"
+    status: CURRENT
+    source: https://theupdateframework.github.io/specification/latest/
+    used_by: [update-design-reference, freshness, rollback, role-separation]
+  - name: Uptane Standard for Design and Implementation
+    version: "2.1.0"
+    status: CURRENT
+    source: https://uptane.org/docs/2.1.0/standard/uptane-standard
+    used_by: [target-model-design-reference, inventory, recovery]
+  - name: Sigstore Bundle Format
+    version: "0.3.2"
+    status: CURRENT_DOCUMENTED
+    source: https://docs.sigstore.dev/about/bundle/
+    used_by: [hosted-signing-design, offline-verification-roadmap]
+  - name: NIST AI SSDF Community Profile
+    version: "SP 800-218A"
+    status: FINAL_OPTIONAL
+    source: https://csrc.nist.gov/pubs/sp/800/218/a/final
+    used_by: [future-model-artifact-profile]
+

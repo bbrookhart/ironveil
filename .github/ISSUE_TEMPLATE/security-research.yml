@@ -1,0 +1,23 @@
+name: Security research finding
+description: Report a defensive IRONVEIL finding without exposing sensitive operational data.
+title: "[research] "
+labels: [security, research]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include credentials, real infrastructure details, or live exploit material."
+  - type: textarea
+    id: claim
+    attributes:
+      label: Affected claim or invariant
+      description: Identify the claim, control, or invariant that may fail.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproduction evidence
+      description: Use synthetic fixtures and provide the smallest safe reproduction.
+    validations:
+      required: true
+

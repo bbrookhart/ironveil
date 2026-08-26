@@ -1,0 +1,20 @@
+experiment_id: BROKEN-SEAL
+name: OPERATION BROKEN SEAL
+scope: synthetic local fixtures only
+research_question: Can cryptographic signature validity alone prevent unauthorized installation?
+systems:
+  signature_only:
+    evaluates: [artifact-subject, cryptographic-validity]
+    explicitly_does_not_evaluate: [source, builder, composition, release, target, freshness]
+  ironveil:
+    evaluates: [artifact, source, provenance, composition, security, signer, release, update, target, evidence-manifest]
+metrics:
+  - unauthorized-artifact-acceptance-rate
+  - provenance-break-detection-rate
+  - target-authorization-accuracy
+  - rollback-rejection-rate
+  - signing-identity-enforcement-rate
+  - sbom-composition-recall
+  - verification-latency
+result: results/broken-seal.json
+

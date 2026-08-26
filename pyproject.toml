@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ironveil"
+version = "0.1.0"
+description = "End-to-end software, firmware, and provenance assurance research lab"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Brian Brookhart" }]
+dependencies = [
+  "cryptography>=46.0.0,<47",
+  "networkx>=3.5,<4",
+  "pydantic>=2.12,<3",
+  "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "hypothesis>=6.138,<7",
+  "mypy>=1.17,<2",
+  "pytest>=8.4,<9",
+  "pytest-cov>=6.2,<7",
+  "ruff>=0.12,<1",
+  "types-networkx>=3.5,<4",
+  "types-PyYAML>=6.0,<7",
+]
+
+[project.scripts]
+ironveil = "ironveil.cli.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ironveil"]
+
+[tool.pytest.ini_options]
+addopts = "-q --strict-markers"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["ironveil"]
+exclude = ["tests"]

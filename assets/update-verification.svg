@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="t d">
+  <title id="t">Update verification gate</title><desc id="d">An artifact passes digest, metadata, signature, provenance, target, freshness, and safety checks.</desc>
+  <rect width="1200" height="360" rx="16" fill="#08131a"/>
+  <text x="58" y="52" fill="#dce8ec" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700">TARGET UPDATE GATE</text>
+  <g transform="translate(60 100)" font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect width="170" height="74" rx="8" fill="#13262e" stroke="#496570"/><text x="85" y="33" text-anchor="middle" fill="#e4edf0" font-size="14" font-weight="700">ARTIFACT</text><text x="85" y="53" text-anchor="middle" fill="#79919b" font-size="11">digest-pinned</text>
+    <path d="M170 37h56" stroke="#72e0b6" stroke-width="2"/><path d="M220 32l8 5-8 5z" fill="#72e0b6"/>
+    <g transform="translate(228)">
+      <rect width="600" height="150" rx="10" fill="#0f2027" stroke="#72e0b6"/>
+      <g fill="#b8c9cf" font-size="12"><text x="30" y="36">01 · artifact digest</text><text x="220" y="36">02 · signed metadata</text><text x="410" y="36">03 · provenance policy</text><text x="30" y="76">04 · target binding</text><text x="220" y="76">05 · version + freshness</text><text x="410" y="76">06 · maintenance state</text></g>
+      <path d="M30 106h540" stroke="#294852"/><rect x="30" y="119" width="540" height="10" rx="5" fill="#173039"/><rect x="30" y="119" width="540" height="10" rx="5" fill="#72e0b6"/>
+    </g>
+    <path d="M828 75h56" stroke="#72e0b6" stroke-width="2"/><path d="M878 70l8 5-8 5z" fill="#72e0b6"/>
+    <g transform="translate(886 38)"><rect width="180" height="74" rx="8" fill="#15372f" stroke="#72e0b6"/><text x="90" y="33" text-anchor="middle" fill="#e7fff7" font-size="15" font-weight="700">INSTALL</text><text x="90" y="53" text-anchor="middle" fill="#8fd8bd" font-size="11">or explicit recovery</text></g>
+  </g>
+  <text x="60" y="316" fill="#758d97" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12">ANY CRITICAL FAILURE → REJECT · UNKNOWN NEVER BECOMES VERIFIED</text>
+</svg>
+

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="t d">
+  <title id="t">Operation Broken Seal experiment</title><desc id="d">The flagship experiment compares signature-only and full-chain verification using measured synthetic scenarios.</desc>
+  <rect width="1200" height="500" rx="16" fill="#08131a"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="58" y="58" fill="#dce8ec" font-size="24" font-weight="800">OPERATION BROKEN SEAL</text><text x="58" y="86" fill="#7f97a0" font-size="13">SIGNATURE VALIDITY IS NOT RELEASE AUTHORIZATION</text></g>
+  <g transform="translate(58 126)" font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect width="512" height="206" rx="12" fill="#281d21" stroke="#875146"/>
+    <text x="28" y="42" fill="#f4c4ba" font-size="17" font-weight="700">SYSTEM A · SIGNATURE ONLY</text>
+    <text x="28" y="72" fill="#b88b82" font-size="12">Cryptography passes; policy context is not evaluated.</text>
+    <g fill="#d8a69c" font-size="13"><text x="28" y="115">source authorization</text><text x="28" y="143">builder identity</text><text x="28" y="171">target + rollback</text></g>
+    <g fill="#e58b79" text-anchor="end" font-size="13" font-weight="700"><text x="478" y="115">NOT CHECKED</text><text x="478" y="143">NOT CHECKED</text><text x="478" y="171">NOT CHECKED</text></g>
+    <rect x="28" y="184" width="456" height="4" fill="#e58b79"/>
+    <g transform="translate(570)"><rect width="512" height="206" rx="12" fill="#132c27" stroke="#4da98a"/><text x="28" y="42" fill="#c9f7e5" font-size="17" font-weight="700">SYSTEM B · IRONVEIL</text><text x="28" y="72" fill="#83b7a4" font-size="12">Evidence, identity, authorization, target, and state.</text><g fill="#9fd8c2" font-size="13"><text x="28" y="115">digest-bound provenance</text><text x="28" y="143">expected signer + issuer</text><text x="28" y="171">fresh target authorization</text></g><g fill="#72e0b6" text-anchor="end" font-size="13" font-weight="700"><text x="478" y="115">ENFORCED</text><text x="478" y="143">ENFORCED</text><text x="478" y="171">ENFORCED</text></g><rect x="28" y="184" width="456" height="4" fill="#72e0b6"/></g>
+  </g>
+  <g transform="translate(58 360)" font-family="Inter,Segoe UI,Arial,sans-serif">
+    <g fill="#0d1d24" stroke="#29434e"><rect width="252" height="72" rx="7"/><rect x="274" width="252" height="72" rx="7"/><rect x="548" width="252" height="72" rx="7"/><rect x="822" width="260" height="72" rx="7"/></g>
+    <g fill="#718994" font-size="10"><text x="18" y="25">UNAUTHORIZED ATTEMPTS</text><text x="292" y="25">SIGNATURE-ONLY ACCEPTED</text><text x="566" y="25">IRONVEIL INSTALLED</text><text x="840" y="25">SCENARIOS MATCHED</text></g>
+    <g font-size="25" font-weight="800"><text x="18" y="56" fill="#dce8ec">17</text><text x="292" y="56" fill="#e58b79">15 / 17</text><text x="566" y="56" fill="#72e0b6">0 / 17</text><text x="840" y="56" fill="#72e0b6">20 / 20</text></g>
+  </g>
+  <text x="58" y="470" fill="#80969f" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12">MEASURED SYNTHETIC RESULT · 2026-08-26 · assumptions and raw runs: experiments/results/broken-seal.json</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="t d">
+  <title id="t">Provenance lineage graph</title><desc id="d">A device traces through release, artifact, build, commit, and review evidence.</desc>
+  <rect width="1200" height="360" rx="16" fill="#08131a"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="58" y="52" fill="#dce8ec" font-size="23" font-weight="700">PROVENANCE LINEAGE</text><text x="1140" y="52" text-anchor="end" fill="#69838d" font-size="13">DEVICE → REVIEWED CHANGE</text></g>
+  <path d="M126 177H1074" stroke="#2f4b56" stroke-width="3"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <g fill="#13262e" stroke="#72e0b6" stroke-width="2"><circle cx="126" cy="177" r="50"/><circle cx="316" cy="177" r="50"/><circle cx="506" cy="177" r="50"/><circle cx="696" cy="177" r="50"/><circle cx="886" cy="177" r="50"/><circle cx="1074" cy="177" r="50"/></g>
+    <g fill="#e4edf0" font-size="13" font-weight="700"><text x="126" y="173">DEVICE</text><text x="126" y="191">001</text><text x="316" y="181">RELEASE</text><text x="506" y="173">ARTIFACT</text><text x="506" y="191">sha256</text><text x="696" y="181">BUILD</text><text x="886" y="173">COMMIT</text><text x="886" y="191">REVISION</text><text x="1074" y="181">REVIEW</text></g>
+    <g fill="#78909a" font-size="10"><text x="221" y="248">TARGETS</text><text x="411" y="248">AUTHORIZED_AS</text><text x="601" y="248">PRODUCED</text><text x="791" y="248">BUILT_FROM</text><text x="980" y="248">REVIEWED</text></g>
+  </g>
+  <g fill="#72e0b6"><path d="M181 172l-9 5 9 5z"/><path d="M371 172l-9 5 9 5z"/><path d="M561 172l-9 5 9 5z"/><path d="M751 172l-9 5 9 5z"/><path d="M941 172l-9 5 9 5z"/></g>
+  <text x="600" y="322" text-anchor="middle" fill="#9eb2ba" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13">ironveil graph trace DEVICE-001</text>
+</svg>
+

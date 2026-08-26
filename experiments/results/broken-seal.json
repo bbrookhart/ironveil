@@ -1,0 +1,207 @@
+{
+  "experiment": "OPERATION BROKEN SEAL",
+  "release_id": "RELEASE-00001",
+  "artifact": "veilnode-1.0.0",
+  "artifact_digest": "sha256:d415bcdd7585958f1fd69389cc0557a2f71bfbac94b8038b363c04b42a5c7a17",
+  "generated_at": "2026-08-26T20:58:44.363568+00:00",
+  "scope": "synthetic local fixtures; no external systems targeted",
+  "supply_chain_mutations_tested": 17,
+  "unauthorized_releases_attempted": 17,
+  "unauthorized_artifacts_installed": 0,
+  "signature_only_unauthorized_acceptance_rate": 0.8823529411764706,
+  "ironveil_unauthorized_acceptance_rate": 0.0,
+  "provenance_break_detection_rate": 1.0,
+  "target_authorization_accuracy": 1.0,
+  "rollback_rejection_rate": 1.0,
+  "signing_identity_enforcement_rate": 1.0,
+  "sbom_composition_recall": 1.0,
+  "median_verification_latency_ms": 0.4008165,
+  "scenario_pass_rate": 1.0,
+  "scenarios": [
+    {
+      "id": "SCN-001",
+      "name": "Golden Release",
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.862
+    },
+    {
+      "id": "SCN-002",
+      "name": "Unauthorized Source Revision",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.53
+    },
+    {
+      "id": "SCN-003",
+      "name": "Missing Review",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.374
+    },
+    {
+      "id": "SCN-004",
+      "name": "Artifact Substitution",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": false,
+      "passed": true,
+      "latency_ms": 0.393
+    },
+    {
+      "id": "SCN-005",
+      "name": "Provenance Substitution",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.482
+    },
+    {
+      "id": "SCN-006",
+      "name": "Untrusted Builder",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.421
+    },
+    {
+      "id": "SCN-007",
+      "name": "Dependency Drift",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.497
+    },
+    {
+      "id": "SCN-008",
+      "name": "SBOM Divergence",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.376
+    },
+    {
+      "id": "SCN-009",
+      "name": "Signing Identity Mismatch",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.402
+    },
+    {
+      "id": "SCN-010",
+      "name": "Registry Substitution",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": false,
+      "passed": true,
+      "latency_ms": 0.41
+    },
+    {
+      "id": "SCN-011",
+      "name": "Expired Update Metadata",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.399
+    },
+    {
+      "id": "SCN-012",
+      "name": "Rollback Attempt",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.413
+    },
+    {
+      "id": "SCN-013",
+      "name": "Wrong Target",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.375
+    },
+    {
+      "id": "SCN-014",
+      "name": "Compromised Online Signing Role",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.414
+    },
+    {
+      "id": "SCN-015",
+      "name": "Key Rotation",
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.427
+    },
+    {
+      "id": "SCN-016",
+      "name": "Authorized Recovery",
+      "expected": "RECOVER",
+      "actual": "RECOVER",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.369
+    },
+    {
+      "id": "SCN-017",
+      "name": "Missing SBOM",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.327
+    },
+    {
+      "id": "SCN-018",
+      "name": "Known Vulnerability",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.396
+    },
+    {
+      "id": "SCN-019",
+      "name": "Evidence Tampering",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.3
+    },
+    {
+      "id": "SCN-020",
+      "name": "CI Identity Drift",
+      "expected": "DENY",
+      "actual": "DENY",
+      "signature_only_accepts": true,
+      "passed": true,
+      "latency_ms": 0.371
+    }
+  ],
+  "limitations": [
+    "Results measure deterministic synthetic scenarios, not all real supply-chain attacks.",
+    "Local Ed25519 keys model offline trust; hosted Sigstore identity verification is not exercised.",
+    "Update metadata exercises TUF security semantics but is not a TUF conformance claim."
+  ]
+}
